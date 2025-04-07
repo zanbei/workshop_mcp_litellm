@@ -139,7 +139,7 @@ class TerminalChat(IChat):
             sys.stdout.write("\033[F")  # Move the cursor up one line
             sys.stdout.write("\033[K")  # Clear the line
             # TODO: can add other action, human in loop
-            self.console.print(tool_schemas)
+            # self.console.print(tool_schemas)
             if i in ["exit", "e", "quit"]:
                 if self._ask_input(agent, exit=["bye", "bye"], finish=["quit", "q"]):
                     return None
@@ -147,8 +147,8 @@ class TerminalChat(IChat):
         response = None
         avatar = self.avatars.get(agent.attribute.name, self.avatars.get("assistant"))
         try:
-            rprint = rich.get_console().print
-            rprint(tool_schemas)
+            # rprint = rich.get_console().print
+            # rprint(tool_schemas)
 
             with self.console.status(
                 f"{avatar} [cyan]{agent.attribute.name} ...[/]", spinner="aesthetic"

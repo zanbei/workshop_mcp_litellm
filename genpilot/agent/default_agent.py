@@ -175,10 +175,8 @@ class Agent(IAgent):
 
     async def tool_call(self, func_name, func_args) -> str:
         func_result = ""
-        # i = 0
-        # max_iter = 3
-        # while i < max_iter:
-        print(f"Tool call {func_name} with args {func_args}",self.agents,self.functions,self.toolkits)
+
+        # print(f"Tool call {func_name} with args {func_args}",self.agents,self.functions,self.toolkits)
         if func_name in self.agents:
             print(f"Processing agent transfer: {func_name}")
             target_agent = self.agents[func_name]
