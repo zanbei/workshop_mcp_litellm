@@ -45,28 +45,27 @@ MCP 协议: 标准化和格式化 agent 之间的交互。
 
 ### 使用方法
 
-克隆仓库：
+#### 克隆仓库：
 
+```python
 git clone https://github.com/zanbei/workshop_mcp_litellm.git
+```
+#### 安装依赖：
 
-安装依赖：
-
+```python
 cd workshop_mcp_litellm
-
 pip install -e .
+```
 
+#### Bedrock 配置说明
 
-### Bedrock 配置说明
+请定义系统变量 "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY","AWS_REGION"。
+参考https://docs.amazonaws.cn/cli/latest/userguide/cli-configure-envvars.html
 
 在 terminal_agent.py 中，AWS Bedrock 的配置如下：
 ```python
 import os
 from litellm import completion
-
-# AWS Bedrock 配置
-os.environ["AWS_ACCESS_KEY_ID"] = "your_aws_access_key_id"
-os.environ["AWS_SECRET_ACCESS_KEY"] = "your_aws_secret_access_key"
-os.environ["AWS_REGION"] = "your_aws_region"
 
 # agent中模型调用范例
 weather_observer = gp.Agent(
@@ -82,7 +81,7 @@ weather_observer = gp.Agent(
 )
 ```
 
-请将 your_aws_access_key_id, your_aws_secret_access_key, 和 your_aws_region 替换为您的 AWS 账户信息。
+
 在方案中使用litellm进行bedrock接口集成，配置详见：https://docs.litellm.ai/docs/providers/bedrock
 
 ### 运行项目：
