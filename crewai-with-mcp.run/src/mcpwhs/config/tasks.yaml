@@ -1,0 +1,16 @@
+write_interesting_stories_task:
+  description: >
+    Write an engaging zoo update that captures the week's most fascinating stories
+    and memorable moments. Share stand-out animal moments that show off their unique
+    personalities. Include visitor interactions, keeper stories, and facility updates.
+    Focus on interesting details that would surprise and delight readers. Keep the tone
+    friendly and conversational. Aim for 250 words.
+  expected_output: 5 engaging stories/updates that summarize the day.
+  agent: zookeeper
+
+publish_blog_posts_task:
+  description: >
+    Publish the stories as one blog post to the zoo's WordPress site. Check recent
+    posts to avoid content duplication. Set status to "published" directly.
+  expected_output: A live blog post series showcasing the zoo's animals.
+  agent: social_media_manager
