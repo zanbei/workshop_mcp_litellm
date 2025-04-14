@@ -1,40 +1,43 @@
-from crewai import Agent, Crew, Process, Task
+from crewai import Agent, Crew, Process, Task, LLM
 from crewai.project import CrewBase, agent, crew, task
-from mcp_research.tools import get_simple_tools
+from mcp_research.tools import get_tools
 
-# Get our simple demo tools.
-simple_tools = get_simple_tools()
-
+tools = get_tools()
 @CrewBase
 class SimpleCrew:
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
+    llm = LLM(model="us.amazon.nova-lite-v1:0")
+
 
     @agent
     def assistant(self) -> Agent:
         return Agent(
             config=self.agents_config['assistant'],
-            verbose=True
+            llm=self.llm,
+            verbose=True,
+            tools=tools
         )
 
     @agent
-    def writer(self) -> Agent:
+    def advisor(self) -> Agent:
         return Agent(
-            config=self.agents_config['writer'],
+            config=self.agents_config['advisor'],
+            llm=self.llm,
             verbose=True,
-            tools=simple_tools  # Writer gets access to our simple MCP tool.
+            tools=tools
         )
 
     @task
-    def greeting_task(self) -> Task:
+    def fashion_task(self) -> Task:
         return Task(
-            config=self.tasks_config['greeting_task']
+            config=self.tasks_config['fashion_task']
         )
 
     @task
-    def story_task(self) -> Task:
+    def weather_task(self) -> Task:
         return Task(
-            config=self.tasks_config['story_task']
+            config=self.tasks_config['weather_task']
         )
 
     @crew

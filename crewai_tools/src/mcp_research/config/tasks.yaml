@@ -1,0 +1,11 @@
+weather_task:
+  description: >
+    Based on the user's query: {query} to get the location and time of query and call get_weather tool.
+  expected_output: Weather information.
+  agent: assistant
+
+fashion_task:
+  description: >
+    Based on the user's query: {query} to get the location and temperature information and call get_fashion tool.
+  expected_output: Fashion information.
+  agent: advisor
