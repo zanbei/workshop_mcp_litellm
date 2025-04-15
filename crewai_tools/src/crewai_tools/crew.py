@@ -1,6 +1,6 @@
 from crewai import Agent, Crew, Process, Task, LLM
 from crewai.project import CrewBase, agent, crew, task
-from mcp_research.tools import get_tools
+from crewai_tools.tools import get_tools
 
 tools = get_tools()
 @CrewBase

@@ -2,7 +2,7 @@ from litellm import completion # type:
 # import litellm
 # litellm._turn_on_debug()
 from dotenv import load_dotenv
-from mcp_research.crew import SimpleCrew
+from crewai_tools.crew import SimpleCrew
 # Load environment variables from .env file
 load_dotenv()
 
