@@ -1,22 +1,11 @@
 [project]
-name = "mcp-research"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-authors = [
-    { name = "Wajahat Hussain", email = "wajahat.taurus2009@gmail.com" }
-]
+name = "mcp-crewai-workshop"
 requires-python = ">=3.12"
 dependencies = [
     "crewai>=0.102.0",
     "dotenv>=0.9.9",
     "mcp-run>=0.1.3",
 ]
-
-[project.scripts]
-mcp-research = "mcp_research.main:run"
-mcp-research-plot = "mcp_research.main:plot"
-gemini = "mcp_research.main:gemini"
 
 [build-system]
 requires = ["hatchling"]
