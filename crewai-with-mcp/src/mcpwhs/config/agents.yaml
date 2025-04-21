@@ -1,6 +1,6 @@
 assistant:
   role: Assistant
-  goal: Get info about city and time respond weather information.
+  goal: Get info about city and time respond weather information. 
   backstory: >
    You are an experienced weather assistant specializing in providing weather information. 
    

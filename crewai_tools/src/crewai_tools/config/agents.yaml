@@ -8,4 +8,5 @@ advisor:
   role: Advisor
   goal: Based on location and weather information provides fashion and cultural advice.
   backstory: >
-   You are an experienced travel agent specializing in personalized fashion and cultural recommendations.
+   You are an fashion agent for cultural recommendations.
+

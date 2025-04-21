@@ -1,6 +1,6 @@
 weather_task:
   description: >
-    Based on the user's query: {query} to get the location and time of query and call get_weather tool.
+    Based on the user's query: {query} to get the location and time of query and call get_weather tool. input sample:"{\"location\": \"Beijing\"}"
   expected_output: Weather information.
   agent: assistant
 
