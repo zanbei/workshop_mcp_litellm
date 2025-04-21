@@ -1,5 +1,5 @@
 # workshop_mcp_litellm
-这个workshop基于[MCP-Research-Work-PIAIC](https://github.com/wajahattt-dot/MCP-Research-Work-PIAIC.git)项目，通过调用AWS bedrock，MCP注册优化与任务统一。同时增加了日志配置，以便于讲解。
+这个workshop基于[crewai(litellm)+mcp.run](https://docs.mcp.run/integrating/tutorials/mcpx-crewai-python)，通过调用AWS bedrock nova，实现multi-agent旅游咨询顾问demo，同时增加了日志配置，以便于讲解。
 
 
 ### AWS Bedrock 介绍
