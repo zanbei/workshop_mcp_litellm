@@ -26,13 +26,7 @@ class SimpleCrew:
             llm=self.llm,
             verbose=True,
         )
-    @agent
-    def traveller(self) -> Agent:
-        return Agent(
-            config=self.agents_config['traveller'],
-            llm=self.llm,
-            verbose=True,
-        )
+
     @task
     def fashion_task(self) -> Task:
         return Task(

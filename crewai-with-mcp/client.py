@@ -31,6 +31,7 @@ async def main():
             weather_response = await agent.ainvoke(
                 {"messages": [{"role": "user", "content": "what is the weather in beijing?"}]}
             )
+            # print("Weather response:", weather_response)
             final_answer = ""
             # 反向遍历消息列表，因为最终回答通常在末尾
             for message in reversed(weather_response['messages']):
