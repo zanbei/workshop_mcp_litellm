@@ -8,12 +8,12 @@ async def get_weather(location: str) -> str:
     # return "Beijing \n Weather: Sunny\n Temperature: 25°C\n Humidity: 60%\n Wind Speed: 10 km/h\n"
     # Mock weather data for specific cities
     weather_data = {
-        "Copenhagen": {"temperature": "18", "description": "Partly cloudy"},
-        "Beijing": {"temperature": "25", "description": "Sunny"},
-        "Berlin": {"temperature": "20", "description": "Clear sky"},
-        "Paris": {"temperature": "22", "description": "Cloudy"},
-        "Phuket": {"temperature": "32", "description": "Tropical"},
-        "Shanghai": {"temperature": "28", "description": "Humid"}
+        "Copenhagen": {"temperature": "18C", "description": "Partly cloudy"},
+        "Beijing": {"temperature": "25C", "description": "Sunny"},
+        "Berlin": {"temperature": "20C", "description": "Clear sky"},
+        "Paris": {"temperature": "22C", "description": "Cloudy"},
+        "Phuket": {"temperature": "32C", "description": "Tropical"},
+        "Shanghai": {"temperature": "28C", "description": "Humid"}
     }
 
     try:
