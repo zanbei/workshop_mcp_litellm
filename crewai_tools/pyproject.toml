@@ -7,5 +7,4 @@ requires-python = ">=3.12"
 dependencies = [
     "crewai>=0.102.0",
     "dotenv>=0.9.9",
-    "mcp-run>=0.1.3",
 ]
